@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+*{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    /* color: white; */
+}
+body{
+    background-image: url("Screenshot 2024-09-23 192310.png");
+    margin: 0;
+}
+.carousel-item {
+    height: 500px;
+}
+.carousel-image-1 {
+    background-image: url("Screenshot 2024-09-27 155452.png");
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background-image: url("Site Header.png");
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background-image: url("360_F_933352429_a9mDpfa6gD7I8pKmxqZwwOxgmpIRdpMR.jpg");
+    background-size: cover;
+}
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #646464;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 300px; /* ปรับขนาดของกรอบรูป */
+    max-height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 15px; /* เพิ่มความโค้งมน */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* เงารอบกรอบรูป */
+}
+
+.section-products .single-product .part-1::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+    transform: scale(1.2,1.2) rotate(5deg); /* ขยายและหมุน */
+}
+
+.section-products .single-product #product-2 .part-1::before {
+    background: url("https://th.aorus.com/upload/Product/F_20201230135856TD1880.JPG") no-repeat center;
+    background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #ff6868;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-radius: 3px; /* ปรับให้ขอบมน */
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #242424;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+    transition: color 0.2s;
+    border-radius: 50%; /* ปรับให้ปุ่มเป็นวงกลม */
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #616161;
+}
+
+.section-products .single-product .part-2 {
+    text-align: start;
+    transition: transform 0.3s ease;
+    padding: 15px; /* เพิ่มการเว้นระยะห่าง */
+}
+
+.single-product:hover .part-2 {
+    transform: translateY(-10px);
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #181818; /* สีเขียว */
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+.section-products #product-2 .part-1 {
+    background-image: url('https://th.aorus.com/upload/Product/F_20201230135856TD1880.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 200px; 
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* ทำให้รูปภาพขยับตอน Hover */
+.part-1 {
+    overflow: hidden;
+    position: relative;
+}
+
+.part-1 img {
+    transition: transform 0.5s ease;
+}
+
+.part-1:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* เอฟเฟกต์ขยับตัวอักษร */
+.part-2 {
+    border: 0px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.part-2:hover {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #85A98F;
+}
+.card {
+    width: 444px;
+  }
+.header h2{
+   color: white;
+}
+li a:hover {
+    padding: 5px; /* ให้เห็นความแตกต่างตอนระหว่างชี้ ชี้แล้วจะเกิดการขยับของตัวอักษรเล็กน้อย */
+    transition: background-color 0.3s ease; /* Transition ทำให้ชี้แล้วสมูทมากขึ้น */
+}
